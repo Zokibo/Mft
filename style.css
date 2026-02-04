@@ -1,0 +1,64 @@
+/* Vidéo en background */
+.bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* zoom normal */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Conteneur principal pour centrer tout le contenu */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* QUESTION parfaitement centrée */
+.question {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+}
+
+/* BOUTONS centrés en bas */
+.actions {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes {
+  background: #4CAF50;
+  color: white;
+}
+
+.no {
+  background: #f44336;
+  color: white;
+}
+
+.question {
+  color: white;              /* texte blanc */
+  font-weight: bold;         /* en gras si souhaité */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* optionnel : ombre pour lisibilité */
+}

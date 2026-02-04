@@ -1,0 +1,33 @@
+/*.image {
+  display: block;          
+  margin: 0 auto;          
+  max-width: 80%;          
+  height: auto;            
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+*/
+/* Vidéo en background */
+.bg-video {
+  position: fixed;         /* reste derrière tout le contenu */
+  top: 50%;
+  left: 50%;
+  width: 120%;             /* plus grand que 100% pour couvrir */
+  height: 120%;
+  object-fit: cover;       /* couvre tout l’écran */
+  transform: translate(-50%, -50%) scale(0.9); /* réduit légèrement le zoom */
+  z-index: -1;
+  pointer-events: none;    /* les clics passent à travers */
+}
+
+
+/* Conteneur du contenu au-dessus */
+.container, .question, .actions {
+  position: relative;    /* pour que le z-index -1 de la vidéo reste derrière */
+}
+
+.message {
+    color: white;              /* texte blanc */
+    font-weight: bold;         /* en gras si souhaité */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* optionnel : ombre pour lisibilité */
+}
